@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ping pong game</title>
+</head>
+<style>
+    body{
+        padding:0;
+        margin:0;
+        width:100%;
+        height:100%;
+        background-color: lightblue;
+    
+
+    }
+    .rod {
+        height: 20px;
+        width: 250px; /* Set a fixed width */
+     
+        border-radius: 30px;
+        color: white;
+        text-align: center;
+       
+       
+    }
+    #rod1{
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: blue;
+    }
+    #rod2{
+        position: absolute;
+        bottom:0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: rgb(219, 14, 219);
+    }
+    @keyframes changeColor {
+        from{
+            background-color: rgb(188, 5, 5);
+        }
+        to{
+            background-color: rgb(245, 12, 12);
+        }
+        
+    }
+    #ball{
+        height:30px;
+        width:30px;
+        border-radius: 100%;
+        display: block;
+        margin:0px auto;
+        background-color: rgb(188, 5, 5);
+        animation-name: changeColor;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        transition:color;
+        position:relative;
+        top:20px;
+        
+    }
+   
+</style>
+<body>
+   
+    <div class="rod" id="rod1">Rod1</div>
+    <div id="ball"></div>
+    <div class="rod" id="rod2">Rod2</div>
+  
+
+    <script src="index.js"></script>
+</body>
+</html>
